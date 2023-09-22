@@ -17,10 +17,10 @@ const Welcome = () => {
             All powered by decentralized Ethereum Smart Contracts By Team CryptoCrew
             </p>
             <div className="mt-4">
-            <Link to="/hi">
+            <Link to="/portal2">
             <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md mr-4">Issue Certificate</button>
             </Link>
-            <Link to="/by">
+            <Link to="/portal3">
             <button className="bg-green-500 text-white font-semibold py-2 px-4 rounded-md">View Certificate</button>
             </Link>
           </div>

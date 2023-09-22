@@ -20,9 +20,9 @@ const Navbar = () => {
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
         <Link to="/"><li className="mx-4 cursor-pointer">Home</li></Link>
         <Link to="/CAP"><li className="mx-4 cursor-pointer">Authority Portal</li></Link>
-        <Link to="/bye"><li className="mx-4 cursor-pointer">Institute Portal</li></Link>
+        <Link to="/portal2"><li className="mx-4 cursor-pointer">Institute Portal</li></Link>
         <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-          View Certificate
+          <Link to="/portal3">View Certificate</Link>
         </li>
       </ul>
       <div className="flex relative">

@@ -9,6 +9,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import Button from "@material-ui/core/Button";
 import {
   List,
   ListItem,
@@ -31,56 +32,6 @@ const ListText = withStyles({
   },
 })(ListItemText);
 
-const styles = (theme) => ({
-  container: {
-    display: "flex",
-  },
-  paper: {
-    [theme.breakpoints.up("sm")]: {
-      borderRadius: "5%",
-      marginRight: 30,
-    },
-    [theme.breakpoints.up(1150)]: {
-      marginLeft: 50,
-      width: 500,
-    },
-    height: "100%",
-    marginTop: theme.spacing.unit * 6,
-    marginBottom: "40px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme
-      .spacing.unit * 3}px`,
-  },
-  form: {
-    width: "100%", // Fix IE 11 issue.
-    // marginTop: theme.spacing.unit,
-  },
-  submit: {
-    marginTop: theme.spacing.unit * 3,
-  },
-  media: {
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme
-      .spacing.unit * 3}px`,
-  },
-  imgstyles: {
-    maxWidth: "70vw",
-    maxHeight: "90vh",
-    [theme.breakpoints.down(1200)]: {
-      marginTop: theme.spacing.unit * 4,
-    },
-  },
-  courseItem: {
-    width: "100%",
-    background: "#73737312",
-    borderRadius: "100px",
-    marginBottom: "10px",
-    paddingLeft: "25px",
-    marginBottom: "10px",
-    border: "1px solid #d8d8d8",
-  },
-});
 
 const CAP = () => {
     return (
@@ -89,7 +40,7 @@ const CAP = () => {
           variant="h4"
           color="primary"
           align="center"
-          style={{ marginTop: "60px" }}
+          style={{ marginTop: "30px" }}
         >
           Welcome,Authority
         </Typography>
@@ -101,8 +52,8 @@ const CAP = () => {
           >
             <Paper style={{borderRadius: "5%",marginRight: 10,marginLeft: 10,
       width: 500,height: "100%",
-      marginTop: "40px",
-      marginBottom: "40px",
+      marginTop: "20px",
+      marginBottom: "20px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -124,7 +75,7 @@ const CAP = () => {
               <Box m={1} />
                   <Typography
                     variant="h6"
-                    style={{ alignSelf: "flex-start", marginBottom: "-10px",marginTop:"10px" }}
+                    style={{ alignSelf: "flex-start", marginBottom: "4px",marginTop:"10px" }}
                   >
                     Details
                   </Typography>
@@ -184,16 +135,29 @@ const CAP = () => {
                         variant="h6"
                         style={{
                           alignSelf: "flex-start",
-                          marginBottom: "-10px",
+                          marginBottom: "0px",
                         }}
                       >
                         Courses
-                      </Typography>
-                      <IconButton
+                        <IconButton
                         color="primary"
+                        style={{
+                          alignSelf: "flex-end"
+                        }}  
                       >
                         <AddCircleOutlineIcon />
                       </IconButton>
+                      </Typography>
+                      
+                      <Button
+                      onClick={() => this.openDialog()}
+                      type="submit"
+                      fullWidth
+                      variant="contained"
+                      color="primary"
+                    >
+                      Add Institute
+                    </Button>
                     </Box>
                   </form>
             </Paper>
